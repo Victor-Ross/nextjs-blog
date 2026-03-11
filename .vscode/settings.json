@@ -4,5 +4,7 @@
   "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
     "typescript": "clear ; npx tsx"
-  }
+  },
+
+  "workbench.editor.enablePreview": false
 }
