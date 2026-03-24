@@ -11,7 +11,7 @@ interface SinglePostProps {
 }
 
 export default async function SinglePost({ slug }: SinglePostProps) {
-  const post = await postRepository.findBySlug(slug);
+  const post = await postRepository.findBySlugPublic(slug);
 
   return (
     <article className="mb-16">
