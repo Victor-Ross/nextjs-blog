@@ -8,6 +8,8 @@ import { PostCoverImage } from "../postCoverImage";
 export async function PostsList() {
   const posts = await findAllPublicPostsCached();
 
+  if (posts === undefined || posts.length === 0) return null;
+
   return (
     <div
       className={clsx(

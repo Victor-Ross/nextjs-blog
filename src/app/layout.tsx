@@ -1,10 +1,11 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 
+import Footer from "@/components/footer";
 import { Header } from "@/components/header";
 import { Container } from "@/components/container";
-
-import "./globals.css";
-import Footer from "@/components/footer";
+import { ToastifyContainer } from "@/components/toastifyContainer";
 
 export const metadata: Metadata = {
   title: {
@@ -27,6 +28,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </Container>
+
+        <ToastifyContainer />
       </body>
     </html>
   );
