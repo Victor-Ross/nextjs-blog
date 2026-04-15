@@ -10,7 +10,11 @@ import { UploadImageAction } from "@/actions/upload/upload-image-action";
 
 import { Button } from "@/components/button";
 
-export function ImageUploader() {
+interface ImageUploaderProps {
+  disabled?: boolean;
+}
+
+export function ImageUploader({ disabled }: ImageUploaderProps) {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const [isUploading, startTransition] = useTransition();
@@ -83,7 +87,7 @@ export function ImageUploader() {
         className="self-start"
         type="button"
         onClick={handleChooseFile}
-        disabled={isUploading}
+        disabled={isUploading || disabled}
       >
         <ImageUpIcon />
         Enviar uma imagem
@@ -103,7 +107,7 @@ export function ImageUploader() {
         name="file"
         accept="image/*"
         onChange={handleChange}
-        disabled={isUploading}
+        disabled={isUploading || disabled}
       />
     </div>
   );

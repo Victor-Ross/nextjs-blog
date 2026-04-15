@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000", // Match your local dev port (e.g., 3000)
+        pathname: "/**", // Allows all image paths under this host
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

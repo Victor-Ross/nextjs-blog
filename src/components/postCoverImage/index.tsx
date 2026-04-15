@@ -1,7 +1,7 @@
+import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
 import { ComponentProps } from "react";
-import clsx from "clsx";
 
 interface PostCoverImage {
   imageProps: ComponentProps<typeof Image>;

@@ -5,7 +5,7 @@ interface InputProps extends ComponentProps<"input"> {
   labelText?: string;
 }
 
-export function Input({ labelText = "", ...inputProps }: InputProps) {
+export function InputText({ labelText = "", ...inputProps }: InputProps) {
   const id = useId();
 
   return (

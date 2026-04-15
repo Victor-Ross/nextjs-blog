@@ -6,7 +6,7 @@ interface InputProps extends ComponentProps<"input"> {
   type?: "checkbox";
 }
 
-export function Input({
+export function InputCheckbox({
   labelText = "",
   type = "checkbox",
   ...inputProps
